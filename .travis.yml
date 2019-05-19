@@ -9,10 +9,8 @@ before_install:
 - pip install -U pip
 - pip install -U setuptools
 - pip install -r requirements.txt
-- pip install tox
 
 script:
-- tox
 - make html
 
 after_success:
