@@ -1,8 +1,28 @@
 language: python
-branches:
-  only:
-  - master
-install:
-- pip install pelican ghp-import
-# script:
-# - make publish github
+dist: trusty
+sudo: required
+
+python:
+- '3.5'
+
+before_install:
+- pip install -U pip
+- pip install -U setuptools
+- pip install -r requirements.txt
+- pip install -r test-requirements.txt
+- pip install peru
+- peru sync
+- pip install tox
+
+script:
+- tox
+- make html
+
+after_success:
+- rm -rf .git/
+- git init
+- git config user.name "Travis CI"
+- git config user.email "travis@domain.com"
+- git config --global push.default simple
+- git remote add origin https://${GITHUB_TOKEN}@github.com/surabaya-py/surabaya-py.github.io
+- make github
