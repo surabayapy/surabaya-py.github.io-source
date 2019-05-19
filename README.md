@@ -1,5 +1,7 @@
 # Surabaya.py Community Blog | Call for your contribution!
 
+[![Build Status](https://travis-ci.org/surabaya-py/surabaya-py.github.io-source.svg?branch=master)](https://travis-ci.org/surabaya-py/surabaya-py.github.io-source)
+
 ## Kontribusi konten
 
 * Fork
