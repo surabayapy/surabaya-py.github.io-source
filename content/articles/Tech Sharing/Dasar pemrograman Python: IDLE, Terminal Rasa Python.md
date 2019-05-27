@@ -1,4 +1,4 @@
-Title: My Second Review with image
+Title: Dasar Pemrograman Python: IDLE, Terminal Rasa Python
 Date: 2019-05-27 14:16
 Tag: Dasar Pemrograman Python
 Author: Handy Handoko
